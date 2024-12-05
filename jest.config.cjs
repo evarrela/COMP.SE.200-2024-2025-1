@@ -6,7 +6,7 @@ module.exports = {
   collectCoverage: true,
 
   collectCoverageFrom: [
-    "src/*",
+    "src/{filter,get,chunk,countBy,toString,isEmpty,upperFirst,isLength,map,reduce}.js",
     "!**/src/.github/**",
     "!**/src/.internal/**",
   ],

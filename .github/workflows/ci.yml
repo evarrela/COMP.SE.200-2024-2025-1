@@ -1,0 +1,62 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  test:
+    runs-on: ubuntu-latest 
+
+    steps:
+      # Step 1: Check out the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 'v21.6.0' 
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          npm install  
+
+      # Step 4: Run tests
+      - name: Run tests
+        run: |
+          npm test 
+name: Tests
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  test:
+    runs-on: ubuntu-latest 
+
+    steps:
+      # Step 1: Check out the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 'v21.6.0' 
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          npm install  
+
+      # Step 4: Run tests
+      - name: Run tests
+        run: |
+          npm test 

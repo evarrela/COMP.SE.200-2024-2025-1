@@ -15,3 +15,11 @@ Individuals who remove or modify the license file will also carry the consequenc
 ## How to run the tests
 
 Run `npm install` and then `npm test`
+
+## TODO: Modifications for the report
+There was one utility method mentioned twice, let's change that and update test plan according to that. I have updated in the word doc.
+
+UX to definations and terms
+
+## Random notes:
+There are failing tests in: toString, countBy, chunk, filter

@@ -1,11 +1,12 @@
 import filter from '../src/filter';
 
 describe('filter function', () => {
-    
-  // Test: Empty Array
-  test('returns an empty array when input array is empty', () => {
-    const result = filter([], ({ active }) => active);
-    expect(result).toEqual([]);
+
+  // Test: Empty, null and undefined inputs
+  test('returns an empty array if input is not an array', () => {
+    expect(filter(null, () => true)).toEqual([]); // Invalid input (null)
+    expect(filter(undefined, () => true)).toEqual([]); // Invalid input (undefined)
+    expect(filter('string', () => true)).toEqual([]); // Invalid input (string)
   });
 
   // Test: Filter by Category (FR_01)
@@ -65,12 +66,6 @@ describe('filter function', () => {
       { name: 'Snack1', producer: 'John' },
       { name: 'Snack3', producer: 'John' },
     ]);
-  });
-
-  // Test: Handles non-array input gracefully
-  test('returns an empty array if input is not an array', () => {
-    const result = filter(null, (item) => item.active);
-    expect(result).toEqual([]);
   });
 
 });

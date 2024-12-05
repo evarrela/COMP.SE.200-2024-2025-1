@@ -6,8 +6,9 @@ module.exports = {
   collectCoverage: true,
 
   collectCoverageFrom: [
-    "src/**/*.{js}", // Include all source files
-    "!src/**/*.test.{js}", // Exclude test files
+    "src/*",
+    "!**/src/.github/**",
+    "!**/src/.internal/**",
   ],
 
   // Output format
@@ -20,7 +21,6 @@ module.exports = {
   coverageDirectory: "coverage",
 
   // Threshold testing
-  /*
   coverageThreshold: {
     global: {
       branches: 80,   // Minimum branch coverage
@@ -29,5 +29,5 @@ module.exports = {
       statements: 80, // Minimum statement coverage
     },
   },
-  */
+  
 };

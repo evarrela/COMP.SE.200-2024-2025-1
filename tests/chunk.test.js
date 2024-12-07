@@ -8,13 +8,13 @@ describe('chunk function (Product Listing & Pagination)', () => {
     expect(chunk(products, 2)).toEqual([['Product1', 'Product2'], ['Product3', 'Product4']]);
   });
 
-  // Test: Handles uneven division of products into chunks (FR_01, usability)
+  // Test: Handles uneven division of products into chunks (FR_01-04, usability)
   test('handles uneven division of products into chunks', () => {
     const products = ['Product1', 'Product2', 'Product3'];
     expect(chunk(products, 2)).toEqual([['Product1', 'Product2'], ['Product3']]);
   });
 
-  // Test: Returns single chunk if size exceeds product list length (FR_01, usability)
+  // Test: Returns single chunk if size exceeds product list length (FR_01-04, usability)
   test('returns single chunk if size exceeds product list length', () => {
     expect(chunk(['Product1', 'Product2'], 5)).toEqual([['Product1', 'Product2']]);
   });
@@ -25,7 +25,7 @@ describe('chunk function (Product Listing & Pagination)', () => {
     expect(chunk(['Product1', 'Product2'], -1)).toEqual([]);
   });
 
-  // Test: Splits product categories for display (FR_01, usability)
+  // Test: Splits product categories for display (FR_01-04, usability)
   test('splits product categories into chunks for display', () => {
     const categories = ['Dairy', 'Bakery', 'Snacks', 'Beverages'];
     expect(chunk(categories, 2)).toEqual([['Dairy', 'Bakery'], ['Snacks', 'Beverages']]);
